@@ -1,0 +1,603 @@
+// VARIABLES
+$mainbg-color: #eee;
+$navbg-color: #344;
+$nav-text-color: #fff;
+$hover-nav-color: #f92;
+$hero-text-color: #fff;
+
+$nav-font-size: 22px;
+$hero1-font-size: 55px;
+$button-font-size: 22px;
+// MIXINS 
+/*
+MEDIA QUERIES MIXINS
+-phone
+-tablet
+-desktop
+*/
+@mixin navs($arg) {
+   @media screen and (max-width: $arg){
+    @content;
+   } 
+}
+
+@mixin layout($arg) {
+   @media screen and (max-width: $arg){
+       @content;
+   }
+}
+
+@mixin hero($arg) {
+    @media screen and (max-width: $arg){
+        @content;
+    }
+ }
+
+// STYLES
+
+body{
+    background-color: $mainbg-color;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.container{
+    margin: 0;
+    padding: 0;
+}
+.container_2{
+    margin: 0;
+    padding: 0;
+}
+section {
+    margin: 0;
+    padding: 0;
+}
+
+///////////// HEADER NAVBAR ///////////
+header{
+    background: $navbg-color;
+    min-height: 80px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            margin-top: 20px;
+            @include navs(600px){
+                display: block;
+                margin: 0;
+            }
+        }
+        a {
+            display: block;
+            color: $nav-text-color;
+            font-size: $nav-font-size;
+            padding: 6px, 12px;
+            margin: 5px;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 50ms linear 0s;
+            &:hover{
+            border-bottom-color: $hover-nav-color; 
+            color: #f92;
+            }
+        }
+    }
+}
+////////////////// WEBSITE HERO SECTIONS /////
+/////// HOME PAGE //////
+.hero_1{
+    height: 600px;
+    background-image:  linear-gradient(to top, rgba(255,255,255,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../img/living-plastered-painted.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: 0;
+
+        .hero-title{
+                    text-align: center;
+                    color: $hero-text-color;
+                    font-size: $hero1-font-size;
+                    margin: 0;
+                    @include hero(600px){
+                        margin: 0;
+                        font-size: 32px;
+}
+                }
+
+                p{
+                    text-align: center;
+                    font-size: 32px;
+                    color: #fff;
+                    @include hero(600px){
+                        font-size: 24px;
+                    }
+                }
+
+}
+.btn_1{
+    width: 30%;
+    height: 50px;
+    color: #fff;
+    background-color: #0a0;
+    font-size: $button-font-size;
+    display: block;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    &:hover{
+        background-color: #f00;
+        cursor: pointer;
+    }
+}
+    ///////// ABOUT US ///////
+.hero_2{
+    height: 600px;
+    background-image:  linear-gradient(to top, rgba(255,255,255,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../img/plastered_and_painted.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: 0;
+
+        .hero-title{
+                    text-align: center;
+                    color: $hero-text-color;
+                    font-size: $hero1-font-size;
+                    margin: 0;
+                    @include hero(600px){
+                        margin: 0;
+                        font-size: 32px;
+}
+}
+
+                p{
+                    text-align: center;
+                    font-size: 32px;
+                    color: #fff;
+                    @include hero(600px){
+                        font-size: 24px;
+                    }
+                }
+
+}
+.btn_1{
+    width: 30%;
+    height: 50px;
+    color: #fff;
+    background-color: #0a0;
+    font-size: $button-font-size;
+    display: block;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    &:hover{
+        background-color: #f00;
+        cursor: pointer;
+    }
+}
+/////////// SERVICES PAGE //////////////
+.hero_3{
+    min-height: 600px;
+    background-image:  linear-gradient(to top, rgba(255,255,255,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../img/services.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 600px;
+    margin: 0;
+    padding: 0;
+
+        .hero-title{
+                    text-align: center;
+                    color: $hero-text-color;
+                    font-size: $hero1-font-size;
+                    margin: 0;
+                    padding: 15px;
+                    @include hero(600px){
+                        margin: 0;
+                        font-size: 32px;
+}
+}
+
+                p{
+                    text-align: center;
+                    font-size: 32px;
+                    color: #fff;
+                    padding: 15px;
+                    @include hero(600px){
+                        font-size: 24px;
+                    }
+                }
+
+}
+.btn_1{
+    width: 30%;
+    height: 50px;
+    color: #fff;
+    background-color: #0a0;
+    font-size: $button-font-size;
+    display: block;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    &:hover{
+        background-color: #f00;
+        cursor: pointer;
+    }
+}
+////////////////// PROJECT PAGE HERO ///////
+.hero_4{
+    min-height: 600px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../img/planning.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 600px;
+    
+    margin: 0;
+    padding: 0;
+
+        .hero-title{
+                    text-align: center;
+                    color: $hero-text-color;
+                    font-size: $hero1-font-size;
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 15px;
+                    @include hero(600px){
+                        margin: 0;
+                        font-size: 32px;
+}
+        }
+                p{
+                    text-align: center;
+                    font-size: 32px;
+                    color: #fff;
+                    padding: 15px;
+                    @include hero(600px){
+                        font-size: 24px;
+                    } 
+                }
+
+}
+.btn_1{
+    width: 30%;
+    height: 50px;
+    color: #fff;
+    background-color: #0a0;
+    font-size: $button-font-size;
+    display: block;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    &:hover{
+        background-color: #f00;
+        cursor: pointer;
+    }
+}
+//////////////// CONTACT PAGE //////////////
+.hero_5{
+    min-height: 600px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 600px;
+    
+    margin: 0;
+    padding: 0;
+
+        .hero-title{
+                    text-align: center;
+                    color: $hero-text-color;
+                    font-size: $hero1-font-size;
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 15px;
+                    @include hero(600px){
+                        margin: 0;
+                        font-size: 32px;
+                    }  
+}
+                p{
+                    text-align: center;
+                    font-size: 32px;
+                    color: #fff;
+                    padding: 15px;
+                    @include hero(600px){
+                        font-size: 24px;
+                    }  
+                }             
+}
+.btn_1{
+    width: 30%;
+    height: 50px;
+    color: #fff;
+    background-color: #0a0;
+    font-size: $button-font-size;
+    display: block;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    &:hover{
+        background-color: #f00;
+        cursor: pointer;
+    }
+    @include hero(600px){
+            width: 100%;       
+    }  
+}
+/////////////////  MAIN LAYOUT ///////////////
+.container_flex{
+    display: flex;
+    flex-direction: row;
+
+    .item{
+        width: 60% 40% ;
+        height: auto;
+            h2{
+                text-align: center;
+                padding: 8px;
+                margin: 6px;
+                font-size: 32px;
+        }
+            p{
+                text-align: center;
+                font-size: 22px;
+                padding: 10px;
+                margin: 0 auto;
+        }
+    }
+    .box{
+        width: 35%;
+        padding: 10px;
+        margin: auto;
+            p{
+            text-align: center;
+            font-size: 22px;
+            }
+
+        }
+        @include layout(800px){
+            flex-direction: column;
+
+        }       
+}
+.container_flex_2{
+    display: flex;
+    justify-content: center;
+        .box_2 {
+            width: 35%;
+            padding: 10px;
+            margin: auto;
+            h4{
+                text-align: center;
+                padding: 8px;
+                margin: 6px;
+                font-size: 32px;
+                @include layout(700px){
+                text-align: center;
+                font-size: 24;
+                 margin: 0;   
+                } 
+            }    
+            p{
+            text-align: center;
+            font-size: 18px;
+            }
+       
+}
+@include layout(800px){
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+} 
+}
+
+///////////////// WEBSITE FORMS ///////////
+.form_1{
+    width: 100%;
+    height: 600px;
+    background-color: #014;
+    border-radius: 25px;
+    padding: 10px 0 0 0;
+    display: block;
+    margin: 0 auto;
+
+
+    input[type=text],[type=email],[type=number]{
+        width: 80%;
+        height: 30px;
+        font-size: 18px;
+        text-align: center;
+        padding: 5px;
+        display: block;
+        margin: 10px auto;
+    }
+    .btn_2{
+        width: 50%;
+        height: 40px;
+        color: #fff;
+        background-color: #0a0;
+        display: block;
+        border: none;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 15px auto;
+        &:hover{
+            background-color: #f00;
+            cursor: pointer;
+        }
+    }
+    textarea{
+        width: 80%;
+        text-align: center;
+        font-size: 18px;
+        margin: 15px auto;
+        display: block;
+    }
+}
+.form_2{
+    width: 80%;
+    height: 600px;
+    background-color: #014;
+    border-radius: 25px;
+    margin: 15px auto;
+    padding: 10px;
+    margin-top: 15px;
+    input[type=text],[type=email],[type=number]{
+        width: 80%;
+        height: 30px;
+        font-size: 18px;
+        text-align: center;
+        display: block;
+        padding: 5px;
+        margin: 15px auto;
+        
+    }
+        .btn_2{
+            width: 50%;
+            height: 40px;
+            color: #fff;
+            background-color: #0a0;
+            display: block;
+            border: none;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 15px auto;
+            &:hover{
+                background-color: #f00;
+                cursor: pointer;
+            }
+          
+        }
+        textarea{
+            width: 80%;
+            text-align: center;
+            font-size: 18px;
+            display: block;
+            margin: 15px auto;
+            
+        }
+    }
+input:valid{
+    border: 2px solid #4e4;
+}
+input:invalid{
+    border: 2px solid #f00;
+}
+//////// MODAL FORMS ///////////// 
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    .modal-content{
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        width: 70%;
+    }
+    .modal-header{
+        background: #0a0;
+        padding: 15px; 
+    }
+    .modal-title{
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        padding: 10px;
+        margin: 0;
+    }
+    .closeBtn{
+        color: #000;
+        text-align: center;
+        float: right;
+        font-size: 30px;
+        font-weight: 500;
+        &:hover{
+            color: #f00;
+            cursor: pointer;
+        }
+    }
+}
+
+///////////////////// IMAGES ICONS /////////
+img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    @include layout(600px){
+        width: 100%;
+        
+    } 
+}
+//////////////// FOOTER ///////////////
+footer{
+    background-color: $navbg-color;
+    color: $nav-text-color;
+    ul{
+        padding: 0;
+        margin: 0;
+        }
+            li{
+                display: block;
+                text-align: center;
+                margin: 0;
+                padding: 5px;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 18px;
+                    padding: 10px;
+                    margin: 5px;
+                    border-bottom: 2px solid transparent;
+                    transition: border-bottom-color 50ms linear 0s;
+                    &:hover{
+                    border-bottom-color: #f92;
+                    color: #f92; 
+                    }
+                }
+            }
+            h2{
+                text-align: center;
+        }   
+}
+////// IMAGE GALLERY /////////
+.imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+}
+
+.main-img{
+    width: 80%;
+    margin: 5px auto;
+}
+/* Fade in animation */
+
+@keyframes fadeIn {
+to {
+    opacity: 1;
+}
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;  
+}
