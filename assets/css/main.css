@@ -319,7 +319,7 @@ header {
 .form_1 {
   width: 100%;
   height: 600px;
-  background-color: #014;
+  background-color: #eee;
   border-radius: 25px;
   padding: 10px 0 0 0;
   display: block;
@@ -355,7 +355,7 @@ header {
 .form_2 {
   width: 80%;
   height: 600px;
-  background-color: #014;
+  background-color: #eee;
   border-radius: 25px;
   margin: 15px auto;
   padding: 10px;
