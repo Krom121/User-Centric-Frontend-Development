@@ -1,8 +1,13 @@
 # Overview
+One of my first websites i ever built:)
 
 ### The purpose of this website
 
 To display a clean and tidy website that can retain end-users to the point of contact to the company. The design of the website is aimed at the construction industry. I achieved this by using Html 5, CSS/SASS and javascript which ensures that the website is responsive on all devices.
+
+To view this website please go to: 
+
+ https://krom121.github.io/flex-and-grid-css-website/.
 
 # Features 
 
